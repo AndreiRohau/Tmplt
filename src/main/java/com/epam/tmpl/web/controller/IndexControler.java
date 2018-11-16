@@ -5,6 +5,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.epam.tmpl.Main;
+
 @Controller
 
 public class IndexControler {
@@ -12,6 +14,10 @@ public class IndexControler {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(ModelMap model) {
 		System.out.println("index page. tmpl");
+		String str = new Main().get("tmpl");
+		System.out.println(str);
+		model.addAttribute("from_my_properties", str);
+		model.put("from_my_properties", str);
 		return "index";
 	}
 

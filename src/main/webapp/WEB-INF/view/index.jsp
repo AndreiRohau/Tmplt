@@ -14,5 +14,9 @@
 <body>
 	<h1>index</h1>
 	<h2>tmpl</h2>
+
+	<p>
+		Property is <b>${from_my_properties}</b>
+	</p>
 </body>
 </html>
