@@ -1,11 +1,11 @@
-package com.epam.tmpl.web.controller;
+package com.ras.tmpl.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.epam.tmpl.Main;
+import com.ras.tmpl.Main;
 
 @Controller
 

@@ -1,4 +1,4 @@
-package com.epam.tmpl.web.config;
+package com.ras.tmpl.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

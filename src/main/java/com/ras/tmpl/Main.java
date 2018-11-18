@@ -1,4 +1,4 @@
-package com.epam.tmpl;
+package com.ras.tmpl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,9 +13,9 @@ public class Main {
 		System.out.println("tmpl prj");
 
 		Main inst = new Main();
-		String prop = inst.get("tmpl");
-		System.out.println(prop);
+		System.out.println(inst.get("tmpl"));
 
+		System.out.println("chain : " + new Main().get("tmpl"));
 	}
 
 	public int i(int i) {
@@ -23,23 +23,17 @@ public class Main {
 	}
 
 	public Main() {
-		try {
-			loadProperties();
-		} catch (IOException e) {
-			System.out.println("Error while Main.class initialization...");
-			e.printStackTrace();
-		}
+		loadProperties();
 	}
-	
+
 	public String get(String name) {
 		return properties.getProperty(name);
 	}
 
-	private void loadProperties() throws IOException {
-		try (InputStream is = Main.class.getClassLoader().getResourceAsStream("main.properties")) {
+	private void loadProperties() {
+		try (InputStream is = getClass().getClassLoader().getResourceAsStream("main.properties")) {
 			properties = new Properties();
 			properties.load(is);
-			is.close();
 		} catch (IOException e) {
 			System.out.println("Error while getting properties...");
 			System.out.println(e);
