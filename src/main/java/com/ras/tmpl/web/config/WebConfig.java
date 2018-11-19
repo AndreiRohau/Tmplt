@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.epam.tmpl")
+@ComponentScan(basePackages = "com.ras.tmpl")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
